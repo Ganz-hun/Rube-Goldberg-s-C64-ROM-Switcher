@@ -1,0 +1,58 @@
+Name     C64_1ROM ;
+PartNo   GAL20V8D ;
+Date     2022. 12. 03. ;
+Revision 05 ;
+Designer Engineer ;
+Company  Casualdehid Electronic Design Group ;
+Assembly None ;
+Location  ;
+Device   G20V8A ;
+
+
+/* *************** GAL 20V8B PINOUT *********************/
+
+/*
+1  I/CLK	VCC	24
+2  I  ROMH	I	23
+3  I  ROML	I/O/Q	22
+4  I  CHAROM	I/O/Q	21	INTRES
+5  I  KERNAL	I/O/Q	20	RAOE
+6  I  BASIC	I/O/Q	19	RA17
+7  I  KERNSW	I/O/Q	18	RA16
+8  I  RESSW	I/O/Q	17	RA15
+9  I  		I/O/Q	16	RA14
+10 I  		I/O/Q  15	RA13
+11 I		I	14
+12 GND		I/!OE	13
+*/
+
+
+/* *************** INPUT PINS *********************/
+PIN 2 = ROMH; 
+PIN 3 = ROML;
+PIN 4 = CHAROM;
+PIN 5 = KERNAL;
+PIN 6 = BASIC;
+PIN 7 = KERNSW;
+PIN 8 = RESSW;
+
+/* *************** OUTPUT PINS *********************/
+PIN 15 = RA13                    ; /*                                 */ 
+PIN 16 = RA14                    ; /*                                 */ 
+PIN 17 = RA15                    ; /*                                 */ 
+PIN 18 = RA16                    ; /*                                 */ 
+PIN 19 = RA17				;	
+PIN 20 = RA_OE                    ; /*                                 */ 
+PIN 21 = INTRES			;
+
+
+RA_OE = ROMH & ROML & CHAROM & KERNAL & BASIC;
+
+!INTRES = !RESSW;
+INTRES.OE = !RESSW;
+
+RA13 = !KERNAL;
+RA14 = !BASIC;
+RA15 = !CHAROM;
+RA16 = !ROMH;
+RA17 = !ROML;
