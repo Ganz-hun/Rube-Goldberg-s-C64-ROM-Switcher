@@ -1,0 +1,42 @@
+A17	A16	A15	A14	A13	A12	A11	A10	A9	A8	A7	A6	A5	A4	A3	A2	A1		
+0 	0 	0 	0  	0			                                  										BASIC	
+0	  0 	0 	0 	1									                													KERNAL	Normal
+0	  0	  0	  1	  0										                												KERNAL1	Yiffy-dos OwO
+0	  0	  0 	1 	1									                													CHAROM	(2x4K, duplicated, even if A12 is floating, we basically don't care *hopefully*)
+0	  0 	1 	0	  0							                															8K	ROML0
+0	  0 	1	  0	  1                																						8K	ROMH0
+0	  0 	1 	1 	0									                													8K	ROML1
+0	  0 	1 	1 	1						                																8K	ROMH1
+0	  1	  1 	1 	1						                																8K	ROML2
+1	  0 	0 	0 	0					                																	8K	ROMH2
+1	  0	  0	  0	  1						                																8K	ROML3
+1	  0 	0	  1	  0						                																8K	ROMH3
+1	  0	  0	  1 	1						                																8K	ROML4
+1	  0 	1	  0	  0							                															8K	ROMH4
+1	  0	  1 	0 	1							                															8K	ROML5
+1	  0	  1	  1	  0							                															8K	ROMH5
+1	  0	  1	  1	  1							                															8K	ROML6
+1	  1	  1	  1	  1							                															8K	ROMH6
+																		
+																		
+																		
+																		
+16 8 4 2 1		Switches:
+X	X	X	X	0		NormalKern
+X	X	X	X	1		YiffyKern
+0	0	0	0	X		ROML0
+0	0	0	1	X		ROMH0
+0	0	1	0	X		ROML1
+0	0	1	1	X		ROMH1
+0	1	0	0	X		ROML2
+0	1	0	1	X		ROMH2
+0	1	1	0	X		ROML3
+0	1	1	1	X		ROMH3
+1	0	0	0	X		ROML4
+1	0	0	1	X		ROMH4
+1	0	1	0	X		ROML5
+1	0	1	1	X		ROMH5
+1	1	0	0	X		ROML6
+1	1	0	1	X		ROMH6
+1	1	1	0	X		
+1	1	1	1	X		
